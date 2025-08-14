@@ -1,0 +1,843 @@
+import * as React from "react";
+declare const DEFAULT_COPY: {
+    BookRadio: {
+        _textOptionNotAvailable: string;
+    };
+    BookTeaser: {
+        _textBy: string;
+    };
+    Breadcrumbs: {
+        _textBackTo: string;
+    };
+    BulkActionsMenu: {
+        _textSelectAll: string;
+    };
+    CollapsibleContent: {
+        _show: string;
+        _hide: string;
+    };
+    ColorPicker: {
+        _defaultColors: string;
+        _customColors: string;
+        _recentlyUsedColors: string;
+    };
+    DatePicker: {
+        _selectDate: string;
+        _startDate: string;
+        _endDate: string;
+    };
+    FileUpload: {
+        _actionError: string;
+        _image: string;
+        _textDragAndDrop: string;
+        _textFile: string;
+        _textReplaceYour: string;
+        _textRequirements: string;
+        _textUploadYour: string;
+        _textUploadedFile: string;
+        _textUploading: string;
+        _textYour: string;
+        _textIs: string;
+        _textValidating: string;
+        _textNormalizing: string;
+        _textProcessing: string;
+        _textPages: string;
+        _textSizeError: string;
+        _textFormatError: string;
+        _textOr: string;
+    };
+    Footer: {
+        _textLanguage: string;
+        _localeSelectText: string;
+    };
+    GeneratedCoverPreview: {
+        _textSelectColorTheme: string;
+        _textUseThisCover: string;
+    };
+    IsbnInput: {
+        _textIsRequired: string;
+        _textIsIncorrect: string;
+        _textIsCorrect: string;
+    };
+    ListPriceForm: {
+        _textPriceTooLow: string;
+        _textPriceTooHigh: string;
+    };
+    PageSizeChoice: {
+        _textItems: string;
+    };
+    Pagination: {
+        _firstPageAriaLabel: string;
+        _previousPageAriaLabel: string;
+        _currentPageAriaLabel: string;
+        _nextPageAriaLabel: string;
+        _lastPageAriaLabel: string;
+    };
+    PaginationInfo: {
+        _textOf: string;
+        _textPage: string;
+        _textPages: string;
+        _textPerPage: string;
+        _textShow: string;
+        _capitalizedTextPage: string;
+    };
+    RevenueGoalForm: {
+        _textCurrency: string;
+        _textRevenueGoal: string;
+    };
+    CartDrawer: {
+        _textViewCart: string;
+        _textContinueShopping: string;
+        _textEmptyCart: string;
+        _textShippingAndTax: string;
+        _textCalculatedAtCheckout: string;
+        _textSubtotal: string;
+        _textYourCart: string;
+        _textCheckout: string;
+        _textAppliedDiscounts: string;
+    };
+    CartItem: {
+        _textCALENDAR: string;
+        _textEBOOK: string;
+        _textCW: string;
+        _textLW: string;
+        _textWO: string;
+        _textSS: string;
+        _textCO: string;
+        _textPB: string;
+        _textBulkDiscount: string;
+        _textVolume5DiscountDescription: string;
+        _textVolume10DiscountDescription: string;
+        _textVolume15DiscountDescription: string;
+        _textNoCover: string;
+        _textQTY: string;
+        _textItemRemoved: string;
+    };
+    PurchaseOrderNumberInput: {
+        _textYourNumber: string;
+        _textAddOptionalNumber: string;
+    };
+    CustomSelect: {
+        _textNoResults: string;
+        _textLoading: string;
+    };
+    Input: {
+        _textShow: string;
+        _textShowAriaLabel: string;
+        _textHide: string;
+        _textHideAriaLabel: string;
+        _textOptional: string;
+    };
+    PricingCalculator: {
+        _textPricingCalculator: string;
+        _textCostPer: string;
+        _textPageCount: string;
+        _textInteriorPageCount: string;
+        _textCoverPageCount: string;
+        _text2PageCoverDescription: string;
+        _textGlobalDistroHint: string;
+        _textCalendarMonths: string;
+        _textCalendarError: string;
+        _textSize: string;
+        _textTotalPageCount: string;
+        _textCalendarSize: string;
+        _textCalendarSizeTitle: string;
+        _textBookSizeTitle: string;
+        _textBookSize: string;
+        _textSelectBookSize: string;
+        _textBindingTypeTitle: string;
+        _textPaperbackOptions: string;
+        _textHardcoverOptions: string;
+        _textLinenWrapDescription: string;
+        _textInteriorColor: string;
+        _textPaperType: string;
+        _textCoverFinish: string;
+        _textProductsPage: string;
+        _textProductsPageDeveloperPortal: string;
+        _textHeaderMoreInformation: string;
+        _textHeaderMoreInformationDeveloperPortal: string;
+        _textHeaderMoreInformationBulkPricing: string;
+        _textHeaderBulkPricingPage: string;
+        _textHeaderDescription: string;
+        _textHeaderDescriptionDeveloperPortal: string;
+        _textOptionNotAvailable: string;
+        _textCreateButton: string;
+        _textDistributionEligibleTitle: string;
+        _textDistributionEligibleYes: string;
+        _textDistributionEligibleNo: string;
+        _textSelectAllProductOptions: string;
+        _textBookTemplates: string;
+        _textCustomCoverTemplate: string;
+        _textCalendarTemplates: string;
+        _textEbookCreationGuide: string;
+        _textFileFormat: string;
+        _textFileFormatEpubOrPdf: string;
+        _textPages: string;
+        _textShippingAndHandlingEstimate: string;
+        _textRevenueEstimates: string;
+        _textEbookInfo1: string;
+        _textEbookInfo2: string;
+        _textEbookInfo3: string;
+        _textEbookInfo4: string;
+        _textEbookInfo5: string;
+        _textEbookInfo5Link: string;
+        _textEbookFileFormat: string;
+        _textAdvancedProductSpecifications: string;
+        _textPageCountMinMax: string;
+        _textInvalidPageCount: string;
+    };
+    RevenueCalculator: {
+        _textDistro: string;
+        _textLuluDirect: string;
+        _textLuluBookstore: string;
+        _textGlobalDistribution: string;
+        _textMinimumListPrice: string;
+        _textYourListPrice: string;
+        _textCurrencyConversion: string;
+        _textEstimatedRevenue: string;
+        _textListPrice: string;
+        _textOfferForFree: string;
+        _textGrossProfit: string;
+        _textDistributionFee: string;
+        _textFulfillmentFee: string;
+        _textLuluShare: string;
+        _textPrintCost: string;
+        _textLBGD_header: string;
+        _textLBGD_description: string;
+        _textLBGD_addGlobalDistribution: string;
+        _textLD_header_1: string;
+        _textLD_header_2: string;
+        _textLD_header_3: string;
+        _textLD_footer: string;
+        _textLD_footerLink: string;
+        _textAmazonKindle: string;
+        _textAppleBooks: string;
+        _textBarnesNobleNook: string;
+        _textKobo: string;
+        _textOtherChannels: string;
+        _textExpandAll: string;
+        _textCollapseAll: string;
+        _textEbookRevenueTitle: string;
+        _textEbookRevenueIntro: string;
+        _textSetPriceBy: string;
+    };
+    ShowGiftReceipt: {
+        _textDownload: string;
+    };
+    GoBack: {
+        _textGoBack: string;
+    };
+    CancelOrder: {
+        _textCancel: string;
+    };
+    DownloadInvoice: {
+        _textDownloadInvoice: string;
+    };
+    OrderDetails: {
+        _textOrderTime: string;
+        _textOrderNumber: string;
+        _textShippingMethod: string;
+        _textShipDate: string;
+        _textArrivalDate: string;
+        _textTracking: string;
+        _textOrderTracking: string;
+        _textShippingAddress: string;
+        _textBillingAddress: string;
+        _textEmail: string;
+        _textPhone: string;
+        _textItemSubtotal: string;
+        _textExcludingShippingTax: string;
+        _textShippingHandling: string;
+        _textExcludingTax: string;
+        _textSalesTax: string;
+        _textPaymentTotal: string;
+        _textRecipientTaxId: string;
+        _textDownloadEbook: string;
+        _textPrinterError: string;
+        _textNoCover: string;
+        _textUnknownProduct: string;
+        _textBy: string;
+        _textCreditedOrder: string;
+        _textCreditCard: string;
+        _textPaymentMethod: string;
+    };
+    StatusIcons: {
+        _textProcessingOrder: string;
+        _textInProduction: string;
+        _textCanceled: string;
+        _textOrderComplete: string;
+        _textPartiallyShipped: string;
+        _textError: string;
+        _textUnpaid: string;
+    };
+    BookSizeSelector: {
+        _pocketBookLabel: string;
+        _pocketBookValue: string;
+        _pocketBookDescription: string;
+        _novellaLabel: string;
+        _novellaValue: string;
+        _novellaDescription: string;
+        _digestLabel: string;
+        _digestValue: string;
+        _digestDescription: string;
+        _a5Label: string;
+        _a5Value: string;
+        _a5Description: string;
+        _usTradeLabel: string;
+        _usTradeValue: string;
+        _usTradeDescription: string;
+        _royalLabel: string;
+        _royalValue: string;
+        _royalDescription: string;
+        _comicBookLabel: string;
+        _comicBookValue: string;
+        _comicBookDescription: string;
+        _executiveLabel: string;
+        _executiveValue: string;
+        _executiveDescription: string;
+        _crownQuartoLabel: string;
+        _crownQuartoValue: string;
+        _crownQuartoDescription: string;
+        _a4Label: string;
+        _a4Value: string;
+        _a4Description: string;
+        _usLetterLabel: string;
+        _usLetterValue: string;
+        _usLetterDescription: string;
+        _smallSquareLabel: string;
+        _smallSquareValue: string;
+        _smallSquareDescription: string;
+        _squareLabel: string;
+        _squareValue: string;
+        _squareDescription: string;
+        _smallLandscapeLabel: string;
+        _smallLandscapeValue: string;
+        _smallLandscapeDescription: string;
+        _usLetterLandscapeLabel: string;
+        _usLetterLandscapeValue: string;
+        _usLetterLandscapeDescription: string;
+        _a4LandscapeLabel: string;
+        _a4LandscapeValue: string;
+        _a4LandscapeDescription: string;
+        _availableForGlobalDistribution: string;
+        _bookSize: string;
+        _compareWithAnotherSize: string;
+        _units: string;
+        _rulers: string;
+        _mm: string;
+        _in: string;
+    };
+    ShippingCalculator: {
+        _textDescription: string;
+        _textDescriptionNoAvailableBulkDiscounts: string;
+        _textDescriptionShippingAndHandling: string;
+        _textQuantityEstimate: string;
+        _textNumberOfCopies: string;
+        _textQuantity: string;
+        _textShippingAndHandlingEstimate: string;
+        _textStartingAt: string;
+        _textBookSubtotal: string;
+        _textShippingAndHandling: string;
+        _textFulfillmentFee: string;
+        _textSubtotal: string;
+        _textSubtotalDescription: string;
+        _textQuantityError: string;
+        _textEstimatedDelivery1: string;
+        _textEstimatedDelivery2: string;
+        _textEstimatedDelivery3: string;
+        _textShippingMethod: string;
+        _textTrackable: string;
+        _textNonTrackable: string;
+        _textDestinationCountry: string;
+        _textBulkDiscount: string;
+        _textDestinationState: string;
+        _textBookQuantity: string;
+        _textDiscountRanges: string;
+        _textPricePerBook: string;
+        _textOff: string;
+        _textTooltipHeader: string;
+        _textTooltipDescription: string;
+        _textTooltipReachOut: string;
+        _textNoShippingOptions: string;
+        _textSelectVariant: string;
+    };
+    AdvancedProductSpecsTable: {
+        _textLuluSku: string;
+        _textPageSize: string;
+        _textMinMaxPageCount: string;
+        _textCoverSize: string;
+        _textSpineWidth: string;
+    };
+    SearchInput: {
+        _textPlaceholder: string;
+        _textClearAll: string;
+    };
+    ProjectSelect: {
+        _textLabel: string;
+        _textPlaceholder: string;
+        _textLuluProjectId: string;
+        _textPrintCost: string;
+        _textResults: string;
+        _textResultsForPage: string;
+        _textPublishedProjects: string;
+        _textNoCover: string;
+        ProductTypeFormat: {
+            _textCalendar: string;
+            _textEbook: string;
+            _textPrintedBook: string;
+            _textPremiumPhotoBook: string;
+            _textMagazine: string;
+            _textComicBook: string;
+            _textYearBook: string;
+            _textBundle: string;
+        };
+        ProjectTile: {
+            _textIncludes: string;
+            _textLulu: string;
+            _textProject: string;
+            _textProjects: string;
+            _textVersion: string;
+        };
+    };
+    QuantityPicker: {
+        _ariaLabel: string;
+    };
+    NumberStepper: {
+        _ariaLabel: string;
+    };
+    Slider: {
+        _rangeMinimumAriaLabel: string;
+        _rangeMaximumAriaLabel: string;
+        _ariaLabel: string;
+        _inputAriaLabel: string;
+    };
+    ImageSlider: {
+        _previewImageAriaLabel: string;
+        _previewColorAriaLabel: string;
+    };
+};
+type Copy = typeof DEFAULT_COPY;
+type DeepPartial<T> = {
+    [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
+export declare const setCopy: (copy: DeepPartial<Copy>) => Copy;
+export declare const CopyContext: React.Context<{
+    BookRadio: {
+        _textOptionNotAvailable: string;
+    };
+    BookTeaser: {
+        _textBy: string;
+    };
+    Breadcrumbs: {
+        _textBackTo: string;
+    };
+    BulkActionsMenu: {
+        _textSelectAll: string;
+    };
+    CollapsibleContent: {
+        _show: string;
+        _hide: string;
+    };
+    ColorPicker: {
+        _defaultColors: string;
+        _customColors: string;
+        _recentlyUsedColors: string;
+    };
+    DatePicker: {
+        _selectDate: string;
+        _startDate: string;
+        _endDate: string;
+    };
+    FileUpload: {
+        _actionError: string;
+        _image: string;
+        _textDragAndDrop: string;
+        _textFile: string;
+        _textReplaceYour: string;
+        _textRequirements: string;
+        _textUploadYour: string;
+        _textUploadedFile: string;
+        _textUploading: string;
+        _textYour: string;
+        _textIs: string;
+        _textValidating: string;
+        _textNormalizing: string;
+        _textProcessing: string;
+        _textPages: string;
+        _textSizeError: string;
+        _textFormatError: string;
+        _textOr: string;
+    };
+    Footer: {
+        _textLanguage: string;
+        _localeSelectText: string;
+    };
+    GeneratedCoverPreview: {
+        _textSelectColorTheme: string;
+        _textUseThisCover: string;
+    };
+    IsbnInput: {
+        _textIsRequired: string;
+        _textIsIncorrect: string;
+        _textIsCorrect: string;
+    };
+    ListPriceForm: {
+        _textPriceTooLow: string;
+        _textPriceTooHigh: string;
+    };
+    PageSizeChoice: {
+        _textItems: string;
+    };
+    Pagination: {
+        _firstPageAriaLabel: string;
+        _previousPageAriaLabel: string;
+        _currentPageAriaLabel: string;
+        _nextPageAriaLabel: string;
+        _lastPageAriaLabel: string;
+    };
+    PaginationInfo: {
+        _textOf: string;
+        _textPage: string;
+        _textPages: string;
+        _textPerPage: string;
+        _textShow: string;
+        _capitalizedTextPage: string;
+    };
+    RevenueGoalForm: {
+        _textCurrency: string;
+        _textRevenueGoal: string;
+    };
+    CartDrawer: {
+        _textViewCart: string;
+        _textContinueShopping: string;
+        _textEmptyCart: string;
+        _textShippingAndTax: string;
+        _textCalculatedAtCheckout: string;
+        _textSubtotal: string;
+        _textYourCart: string;
+        _textCheckout: string;
+        _textAppliedDiscounts: string;
+    };
+    CartItem: {
+        _textCALENDAR: string;
+        _textEBOOK: string;
+        _textCW: string;
+        _textLW: string;
+        _textWO: string;
+        _textSS: string;
+        _textCO: string;
+        _textPB: string;
+        _textBulkDiscount: string;
+        _textVolume5DiscountDescription: string;
+        _textVolume10DiscountDescription: string;
+        _textVolume15DiscountDescription: string;
+        _textNoCover: string;
+        _textQTY: string;
+        _textItemRemoved: string;
+    };
+    PurchaseOrderNumberInput: {
+        _textYourNumber: string;
+        _textAddOptionalNumber: string;
+    };
+    CustomSelect: {
+        _textNoResults: string;
+        _textLoading: string;
+    };
+    Input: {
+        _textShow: string;
+        _textShowAriaLabel: string;
+        _textHide: string;
+        _textHideAriaLabel: string;
+        _textOptional: string;
+    };
+    PricingCalculator: {
+        _textPricingCalculator: string;
+        _textCostPer: string;
+        _textPageCount: string;
+        _textInteriorPageCount: string;
+        _textCoverPageCount: string;
+        _text2PageCoverDescription: string;
+        _textGlobalDistroHint: string;
+        _textCalendarMonths: string;
+        _textCalendarError: string;
+        _textSize: string;
+        _textTotalPageCount: string;
+        _textCalendarSize: string;
+        _textCalendarSizeTitle: string;
+        _textBookSizeTitle: string;
+        _textBookSize: string;
+        _textSelectBookSize: string;
+        _textBindingTypeTitle: string;
+        _textPaperbackOptions: string;
+        _textHardcoverOptions: string;
+        _textLinenWrapDescription: string;
+        _textInteriorColor: string;
+        _textPaperType: string;
+        _textCoverFinish: string;
+        _textProductsPage: string;
+        _textProductsPageDeveloperPortal: string;
+        _textHeaderMoreInformation: string;
+        _textHeaderMoreInformationDeveloperPortal: string;
+        _textHeaderMoreInformationBulkPricing: string;
+        _textHeaderBulkPricingPage: string;
+        _textHeaderDescription: string;
+        _textHeaderDescriptionDeveloperPortal: string;
+        _textOptionNotAvailable: string;
+        _textCreateButton: string;
+        _textDistributionEligibleTitle: string;
+        _textDistributionEligibleYes: string;
+        _textDistributionEligibleNo: string;
+        _textSelectAllProductOptions: string;
+        _textBookTemplates: string;
+        _textCustomCoverTemplate: string;
+        _textCalendarTemplates: string;
+        _textEbookCreationGuide: string;
+        _textFileFormat: string;
+        _textFileFormatEpubOrPdf: string;
+        _textPages: string;
+        _textShippingAndHandlingEstimate: string;
+        _textRevenueEstimates: string;
+        _textEbookInfo1: string;
+        _textEbookInfo2: string;
+        _textEbookInfo3: string;
+        _textEbookInfo4: string;
+        _textEbookInfo5: string;
+        _textEbookInfo5Link: string;
+        _textEbookFileFormat: string;
+        _textAdvancedProductSpecifications: string;
+        _textPageCountMinMax: string;
+        _textInvalidPageCount: string;
+    };
+    RevenueCalculator: {
+        _textDistro: string;
+        _textLuluDirect: string;
+        _textLuluBookstore: string;
+        _textGlobalDistribution: string;
+        _textMinimumListPrice: string;
+        _textYourListPrice: string;
+        _textCurrencyConversion: string;
+        _textEstimatedRevenue: string;
+        _textListPrice: string;
+        _textOfferForFree: string;
+        _textGrossProfit: string;
+        _textDistributionFee: string;
+        _textFulfillmentFee: string;
+        _textLuluShare: string;
+        _textPrintCost: string;
+        _textLBGD_header: string;
+        _textLBGD_description: string;
+        _textLBGD_addGlobalDistribution: string;
+        _textLD_header_1: string;
+        _textLD_header_2: string;
+        _textLD_header_3: string;
+        _textLD_footer: string;
+        _textLD_footerLink: string;
+        _textAmazonKindle: string;
+        _textAppleBooks: string;
+        _textBarnesNobleNook: string;
+        _textKobo: string;
+        _textOtherChannels: string;
+        _textExpandAll: string;
+        _textCollapseAll: string;
+        _textEbookRevenueTitle: string;
+        _textEbookRevenueIntro: string;
+        _textSetPriceBy: string;
+    };
+    ShowGiftReceipt: {
+        _textDownload: string;
+    };
+    GoBack: {
+        _textGoBack: string;
+    };
+    CancelOrder: {
+        _textCancel: string;
+    };
+    DownloadInvoice: {
+        _textDownloadInvoice: string;
+    };
+    OrderDetails: {
+        _textOrderTime: string;
+        _textOrderNumber: string;
+        _textShippingMethod: string;
+        _textShipDate: string;
+        _textArrivalDate: string;
+        _textTracking: string;
+        _textOrderTracking: string;
+        _textShippingAddress: string;
+        _textBillingAddress: string;
+        _textEmail: string;
+        _textPhone: string;
+        _textItemSubtotal: string;
+        _textExcludingShippingTax: string;
+        _textShippingHandling: string;
+        _textExcludingTax: string;
+        _textSalesTax: string;
+        _textPaymentTotal: string;
+        _textRecipientTaxId: string;
+        _textDownloadEbook: string;
+        _textPrinterError: string;
+        _textNoCover: string;
+        _textUnknownProduct: string;
+        _textBy: string;
+        _textCreditedOrder: string;
+        _textCreditCard: string;
+        _textPaymentMethod: string;
+    };
+    StatusIcons: {
+        _textProcessingOrder: string;
+        _textInProduction: string;
+        _textCanceled: string;
+        _textOrderComplete: string;
+        _textPartiallyShipped: string;
+        _textError: string;
+        _textUnpaid: string;
+    };
+    BookSizeSelector: {
+        _pocketBookLabel: string;
+        _pocketBookValue: string;
+        _pocketBookDescription: string;
+        _novellaLabel: string;
+        _novellaValue: string;
+        _novellaDescription: string;
+        _digestLabel: string;
+        _digestValue: string;
+        _digestDescription: string;
+        _a5Label: string;
+        _a5Value: string;
+        _a5Description: string;
+        _usTradeLabel: string;
+        _usTradeValue: string;
+        _usTradeDescription: string;
+        _royalLabel: string;
+        _royalValue: string;
+        _royalDescription: string;
+        _comicBookLabel: string;
+        _comicBookValue: string;
+        _comicBookDescription: string;
+        _executiveLabel: string;
+        _executiveValue: string;
+        _executiveDescription: string;
+        _crownQuartoLabel: string;
+        _crownQuartoValue: string;
+        _crownQuartoDescription: string;
+        _a4Label: string;
+        _a4Value: string;
+        _a4Description: string;
+        _usLetterLabel: string;
+        _usLetterValue: string;
+        _usLetterDescription: string;
+        _smallSquareLabel: string;
+        _smallSquareValue: string;
+        _smallSquareDescription: string;
+        _squareLabel: string;
+        _squareValue: string;
+        _squareDescription: string;
+        _smallLandscapeLabel: string;
+        _smallLandscapeValue: string;
+        _smallLandscapeDescription: string;
+        _usLetterLandscapeLabel: string;
+        _usLetterLandscapeValue: string;
+        _usLetterLandscapeDescription: string;
+        _a4LandscapeLabel: string;
+        _a4LandscapeValue: string;
+        _a4LandscapeDescription: string;
+        _availableForGlobalDistribution: string;
+        _bookSize: string;
+        _compareWithAnotherSize: string;
+        _units: string;
+        _rulers: string;
+        _mm: string;
+        _in: string;
+    };
+    ShippingCalculator: {
+        _textDescription: string;
+        _textDescriptionNoAvailableBulkDiscounts: string;
+        _textDescriptionShippingAndHandling: string;
+        _textQuantityEstimate: string;
+        _textNumberOfCopies: string;
+        _textQuantity: string;
+        _textShippingAndHandlingEstimate: string;
+        _textStartingAt: string;
+        _textBookSubtotal: string;
+        _textShippingAndHandling: string;
+        _textFulfillmentFee: string;
+        _textSubtotal: string;
+        _textSubtotalDescription: string;
+        _textQuantityError: string;
+        _textEstimatedDelivery1: string;
+        _textEstimatedDelivery2: string;
+        _textEstimatedDelivery3: string;
+        _textShippingMethod: string;
+        _textTrackable: string;
+        _textNonTrackable: string;
+        _textDestinationCountry: string;
+        _textBulkDiscount: string;
+        _textDestinationState: string;
+        _textBookQuantity: string;
+        _textDiscountRanges: string;
+        _textPricePerBook: string;
+        _textOff: string;
+        _textTooltipHeader: string;
+        _textTooltipDescription: string;
+        _textTooltipReachOut: string;
+        _textNoShippingOptions: string;
+        _textSelectVariant: string;
+    };
+    AdvancedProductSpecsTable: {
+        _textLuluSku: string;
+        _textPageSize: string;
+        _textMinMaxPageCount: string;
+        _textCoverSize: string;
+        _textSpineWidth: string;
+    };
+    SearchInput: {
+        _textPlaceholder: string;
+        _textClearAll: string;
+    };
+    ProjectSelect: {
+        _textLabel: string;
+        _textPlaceholder: string;
+        _textLuluProjectId: string;
+        _textPrintCost: string;
+        _textResults: string;
+        _textResultsForPage: string;
+        _textPublishedProjects: string;
+        _textNoCover: string;
+        ProductTypeFormat: {
+            _textCalendar: string;
+            _textEbook: string;
+            _textPrintedBook: string;
+            _textPremiumPhotoBook: string;
+            _textMagazine: string;
+            _textComicBook: string;
+            _textYearBook: string;
+            _textBundle: string;
+        };
+        ProjectTile: {
+            _textIncludes: string;
+            _textLulu: string;
+            _textProject: string;
+            _textProjects: string;
+            _textVersion: string;
+        };
+    };
+    QuantityPicker: {
+        _ariaLabel: string;
+    };
+    NumberStepper: {
+        _ariaLabel: string;
+    };
+    Slider: {
+        _rangeMinimumAriaLabel: string;
+        _rangeMaximumAriaLabel: string;
+        _ariaLabel: string;
+        _inputAriaLabel: string;
+    };
+    ImageSlider: {
+        _previewImageAriaLabel: string;
+        _previewColorAriaLabel: string;
+    };
+}>;
+export declare function useCopy(): Copy;
+export declare function useCopy<K extends keyof Copy>(key: K): Copy[K];
+export {};

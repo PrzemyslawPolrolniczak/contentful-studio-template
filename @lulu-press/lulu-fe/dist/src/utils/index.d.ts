@@ -1,0 +1,13 @@
+export * from "./colors";
+export * from "./dates";
+export * from "./host";
+export * from "./images";
+export * from "./keyboardDropdownControls";
+export * from "./locale";
+export * from "./order";
+export * from "./prices";
+export * from "./safeLocalStorage";
+export declare const displayCalendarTotalPageCount: (projectInteriorPageCount: number | null) => number | undefined;
+export declare const displayCalendarMonthCount: (projectInteriorPageCount: number | null) => number | undefined;
+export declare const getRootUrl: (url: string) => string;
+export declare const isNextJs: boolean;

@@ -10,6 +10,9 @@ import { ContentfulClientApi, createClient } from "contentful";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+import "../../../@lulu-press/lulu-fe/dist/styles.css";
+import "../../../@lulu-press/lulu-fe/dist/amber/styles.css";
+
 type StudioProps = {
   slug: string;
   locale?: string;

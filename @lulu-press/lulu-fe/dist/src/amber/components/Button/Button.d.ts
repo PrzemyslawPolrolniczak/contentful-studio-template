@@ -1,0 +1,20 @@
+import React, { MouseEventHandler } from "react";
+import { Colors } from "../../constants";
+import { Icons } from "../../icon-types";
+export type ButtonProps = {
+    additionalHtmlProps?: Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "className" | "style" | "disabled" | "onClick" | "color">;
+    children?: React.ReactNode;
+    dataTestId?: string;
+    variant?: "primary" | "secondary" | "outline" | "destructive" | "contrast" | "ghost" | "split";
+    size?: "small" | "medium" | "large";
+    iconLeft?: Icons;
+    iconRight?: Icons;
+    splitIcon?: Icons;
+    iconColor?: Colors;
+    className?: string;
+    style?: React.CSSProperties;
+    disabled?: boolean;
+    loading?: boolean;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
+};
+export declare const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>>;

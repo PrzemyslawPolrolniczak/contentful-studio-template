@@ -1,0 +1,208 @@
+@use "sass-rem" as rem;
+@forward "../../shared/styles/colors";
+
+// TYPOGRAPHY
+$primary-font-family: "lora", sans-serif;
+$secondary-font-family: "museo-sans", sans-serif;
+$code-font-family: "fira-mono", sans-serif;
+
+// COLORS
+// Surface neutral
+$surface-neutral-emphasized: #f5f4f2;
+$surface-neutral-subtle: #fafaf9;
+$surface-neutral-muted: #ffffff;
+$surface-neutral-subtle-gray: #edeeef;
+$surface-neutral-muted-light: #f5f5f5;
+
+// Surface primary
+$surface-primary-strong: #192229;
+$surface-primary-emphasized: #303a4d;
+$surface-primary-subtle: #505f6b;
+$surface-primary-muted: #5d6a75;
+$surface-primary-dimmed: #6d7880;
+$surface-primary-disabled: #cccfd1;
+$surface-primary-contrast: #fbfbfc;
+
+// Surface transparent
+$surface-transparent-10: rgba(0, 0, 0, 0.1);
+$surface-transparent-6: rgba(0, 0, 0, 0.06);
+$surface-transparent-4: rgba(0, 0, 0, 0.04);
+$surface-transparent-2: rgba(0, 0, 0, 0.02);
+
+// Surface button primary
+$surface-button-primary-default: #303a4d;
+$surface-button-primary-hover: #445461;
+$surface-button-primary-disabled: #cccfd1;
+$surface-button-primary-pressed: #192229;
+
+// Surface button secondary
+$surface-button-secondary-default: #edeeef;
+$surface-button-secondary-hover: #f5f5f5;
+$surface-button-secondary-pressed: #d8dadb;
+$surface-button-secondary-disabled: #cccfd1;
+
+// Surface error
+$surface-error-strong: #ba2e3d;
+$surface-error-emphasized: #c93140;
+$surface-error-subtle: #d83542;
+$surface-error-muted: #ffe1e1;
+$surface-error-dull: #ffafb5;
+
+// Surface accent
+$surface-accent-indigo: #000083;
+$surface-accent-periwinkle: #564fd0;
+$surface-accent-blue: #279eff;
+$surface-accent-green: #06d6a0;
+$surface-accent-yellow: #ffe600;
+$surface-accent-red: #d83542;
+$surface-accent-magenta: #a41cad;
+$surface-accent-orange: #d38135;
+
+// Surface pale
+$surface-pale-indigo: #ebebfa;
+$surface-pale-periwinkle: #e8e7f4;
+$surface-pale-lilac: #f5f4fb;
+$surface-pale-blue: #ebf6ff;
+$surface-pale-green: #def7f0;
+$surface-pale-yellow: #fcfaee;
+$surface-pale-red: #ffe1e1;
+$surface-pale-orange: #fff4eb;
+$surface-pale-magenta: #fcf2fd;
+$surface-pale-periwinkle-75: #f0eff6;
+$surface-pale-periwinkle-250: #cccaeb;
+$surface-pale-periwinkle-400: #adaae2;
+$surface-pale-periwinkle-500: #9894dd;
+$surface-pale-blue-100: #e0f1ff;
+$surface-pale-blue-250: #b9dfff;
+$surface-pale-blue-400: #91ceff;
+$surface-pale-blue-500: #76c2ff;
+$surface-pale-magenta-100: #f3e1f4;
+$surface-pale-magenta-250: #e2b7e5;
+$surface-pale-magenta-400: #d18cd6;
+$surface-pale-magenta-500: #c670cb;
+$surface-pale-orange-75: #ffecdb;
+
+// Surface info
+$surface-info-emphasized: #333333;
+$surface-info-contrast: #ffffff;
+
+// Surface placeholder
+$surface-placeholder-muted: #f0f0f0;
+
+// Surface overlay
+$surface-overlay-default: rgba(52, 51, 50, 0.7);
+$surface-overlay-light: rgba(52, 51, 50, 0.15);
+
+// Border neutral
+$border-neutral-emphasized: #f5f4f2;
+$border-neutral-subtle: #fafaf9;
+$border-neutral-muted: #ffffff;
+
+// Border primary
+$border-primary-strong: #192229;
+$border-primary-emphasized: #303a4d;
+$border-primary-subtle: #505f6b;
+$border-primary-muted: #5d6a75;
+$border-primary-disabled: #cccfd1;
+$border-primary-contrast: #fbfbfc;
+$border-primary-dimmed: #6d7880;
+
+// Border transparent
+$border-transparent-10: rgba(0, 0, 0, 0.1);
+$border-transparent-4: rgba(0, 0, 0, 0.04);
+
+// Border accent
+$border-accent-indigo: #000083;
+$border-accent-periwinkle: #564fd0;
+$border-accent-red: #d83542;
+
+// Content primary
+$content-primary-strong: #192229;
+$content-primary-emphasized: #303a4d;
+$content-primary-subtle: #505f6b;
+$content-primary-muted: #5d6a75;
+$content-primary-disabled: #cccfd1;
+$content-primary-contrast: #fbfbfc;
+$content-primary-dimmed: #6d7880;
+
+// Content transparent
+$content-transparent-10: rgba(0, 0, 0, 0.1);
+$content-transparent-6: rgba(0, 0, 0, 0.06);
+$content-transparent-4: rgba(0, 0, 0, 0.04);
+
+// Content error
+$content-error-emphasized: #c93140;
+$content-error-muted: #ffe1e1;
+$content-error-subtle: #d83542;
+$content-error-dull: #ffafb5;
+
+// Content accent
+$content-accent-indigo: #000083;
+$content-accent-periwinkle: #564fd0;
+$content-accent-blue: #279eff;
+$content-accent-green: #3d856a;
+$content-accent-yellow: #c9b80d;
+$content-accent-red: #d83542;
+$content-accent-magenta: #a41cad;
+$content-accent-orange: #ff7500;
+$content-accent-blue-875: #0071d2;
+$content-accent-green-850: #0d755a;
+
+// Content info
+$content-info-emphasized: #333333;
+$content-info-contrast: #ffffff;
+
+// MEDIA QUERIES
+$xl-screen: 1920px;
+$l-screen: 1366px;
+$m-screen: 1024px;
+$s-screen: 768px;
+$xs-screen: 393px;
+
+// SPACINGS
+$space-1: rem.convert(1px);
+$space-2: rem.convert(2px);
+$space-4: rem.convert(4px);
+$space-5: rem.convert(5px);
+$space-6: rem.convert(6px);
+$space-8: rem.convert(8px);
+$space-10: rem.convert(10px);
+$space-12: rem.convert(12px);
+$space-14: rem.convert(14px);
+$space-16: rem.convert(16px);
+$space-18: rem.convert(18px);
+$space-20: rem.convert(20px);
+$space-24: rem.convert(24px);
+$space-28: rem.convert(28px);
+$space-32: rem.convert(32px);
+$space-40: rem.convert(40px);
+$space-48: rem.convert(48px);
+$space-56: rem.convert(56px);
+$space-64: rem.convert(64px);
+$space-80: rem.convert(80px);
+
+// BORDER RADIUS
+$radius-0: 0;
+$radius-none: 0;
+$radius-2: rem.convert(2px);
+$radius-4: rem.convert(4px);
+$radius-xs: rem.convert(4px);
+$radius-6: rem.convert(6px);
+$radius-s: rem.convert(6px);
+$radius-8: rem.convert(8px);
+$radius-m: rem.convert(8px);
+$radius-12: rem.convert(12px);
+$radius-l: rem.convert(12px);
+$radius-16: rem.convert(16px);
+$radius-xl: rem.convert(16px);
+$radius-18: rem.convert(18px);
+$radius-20: rem.convert(20px);
+$radius-24: rem.convert(24px);
+$radius-2xl: rem.convert(24px);
+$radius-32: rem.convert(32px);
+$radius-3xl: rem.convert(32px);
+$radius-40: rem.convert(40px);
+$radius-100: rem.convert(100px);
+$radius-1000: rem.convert(1000px);
+$radius-full: 50%;
+$radius-2full: 100%;
