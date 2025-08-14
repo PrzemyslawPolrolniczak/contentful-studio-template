@@ -115,11 +115,11 @@ export const SiteButtonDefinition: ComponentDefinition = {
         in: [
           {
             value: "_blank",
-            displayName: "New Tab",
+            displayName: "In New Tab",
           },
           {
             value: "_self",
-            displayName: "Same Tab",
+            displayName: "In The Same Tab",
           },
         ],
       },
