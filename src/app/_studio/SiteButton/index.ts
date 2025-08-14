@@ -123,7 +123,7 @@ export const SiteButtonDefinition: ComponentDefinition = {
           },
         ],
       },
-      defaultValue: "_self",
+      defaultValue: "_blank",
     },
   },
 };
