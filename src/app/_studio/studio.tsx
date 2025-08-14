@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { MODE } from '@/lib/constants';
+import { MODE } from "@/lib/constants";
 import {
   ExperienceRoot,
   useFetchBySlug,
-} from '@contentful/experiences-sdk-react';
-import '@lib/register-components';
-import { ContentfulClientApi, createClient } from 'contentful';
-import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
+} from "@contentful/experiences-sdk-react";
+import "@lib/register-components";
+import { ContentfulClientApi, createClient } from "contentful";
+import { notFound } from "next/navigation";
+import { Suspense } from "react";
 
 type StudioProps = {
   slug: string;
@@ -22,13 +22,13 @@ const client = createClient({
 });
 
 const Studio = (props: StudioProps) => {
-  const { slug, locale = 'en-US', mode } = props;
+  const { slug, locale = "en-US", mode } = props;
 
   const { experience, isLoading, error } = useFetchBySlug({
     client,
     slug,
     localeCode: locale,
-    experienceTypeId: process.env.NEXT_PUBLIC_STUDIO_TYPE_ID || 'landingPage',
+    experienceTypeId: process.env.NEXT_PUBLIC_STUDIO_TYPE_ID || "landingPage",
   });
 
   if (isLoading) {
